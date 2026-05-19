@@ -1,0 +1,311 @@
+import "../App.css"
+
+import { useNavigate } from "react-router-dom"
+
+
+
+function Home() {
+
+  const navigate = useNavigate()
+
+
+  return (
+
+    <div>
+
+      {/* NAVBAR */}
+
+      <nav className="navbar">
+
+        <h1 className="logo">
+          Resume Builder
+        </h1>
+
+
+
+        <div className="nav-links">
+
+          <a href="/">Home</a>
+
+          <a href="/templates">
+            Templates
+          </a>
+
+          <a href="/builder">
+            Builder
+          </a>
+
+          <a href="/contact">
+            Contact
+          </a>
+
+        </div>
+
+      </nav>
+
+
+
+
+
+      {/* HERO SECTION */}
+
+      <div className="container">
+
+        <h1 className="title">
+          Build Your{" "}
+          <span>
+            Professional Resume
+          </span>
+        </h1>
+
+
+
+        <p className="subtitle">
+          Create modern and ATS-friendly
+          resumes easily.
+        </p>
+
+
+
+        <button
+          className="btn"
+          onClick={() =>
+            navigate("/builder")
+          }
+        >
+          Get Started
+        </button>
+
+      </div>
+
+
+
+
+
+      {/* TEMPLATE SECTION */}
+
+      <section className="templates">
+
+        <h2 className="template-title">
+          Resume Templates
+        </h2>
+
+
+
+        <div className="template-cards">
+
+
+
+          <div className="card">
+
+            <h3>Modern Resume</h3>
+
+            <p>
+              Clean and professional
+              template.
+            </p>
+
+            <button
+              onClick={() =>
+                navigate("/templates")
+              }
+            >
+              Use Template
+            </button>
+
+          </div>
+
+
+
+
+
+          <div className="card">
+
+            <h3>Creative Resume</h3>
+
+            <p>
+              Stylish design for
+              creative jobs.
+            </p>
+
+            <button
+              onClick={() =>
+                navigate("/templates")
+              }
+            >
+              Use Template
+            </button>
+
+          </div>
+
+
+
+
+
+          <div className="card">
+
+            <h3>Simple Resume</h3>
+
+            <p>
+              Minimal ATS-friendly
+              template.
+            </p>
+
+            <button
+              onClick={() =>
+                navigate("/templates")
+              }
+            >
+              Use Template
+            </button>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+
+
+      {/* FEATURES SECTION */}
+
+      <section className="features">
+
+        <h2 className="feature-heading">
+          Why Choose ResumeAI?
+        </h2>
+
+
+
+        <div className="feature-boxes">
+
+
+
+          <div className="feature-card">
+
+            <h3>ATS Friendly</h3>
+
+            <p>
+              Create resumes that pass
+              ATS systems easily.
+            </p>
+
+          </div>
+
+
+
+
+
+          <div className="feature-card">
+
+            <h3>Easy Editing</h3>
+
+            <p>
+              Edit your resume quickly
+              with simple tools.
+            </p>
+
+          </div>
+
+
+
+
+
+          <div className="feature-card">
+
+            <h3>PDF Download</h3>
+
+            <p>
+              Download professional
+              resumes instantly.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+      <section className="team-section">
+
+  <h2>
+    Project Created By
+  </h2>
+
+  <div className="team-cards">
+
+    <div className="team-card">
+      <h3>Rahul Fulara</h3>
+      <p>Frontend Developer</p>
+    </div>
+
+    <div className="team-card">
+      <h3>Rohit Singh Bora</h3>
+      <p>UI Designer</p>
+    </div>
+
+    <div className="team-card">
+      <h3>Pradeep Bhakuni</h3>
+      <p>React Developer</p>
+    </div>
+
+    <div className="team-card">
+      <h3>Manmohan Singh Chauhan</h3>
+      <p>Project Manager</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+      {/* FOOTER */}
+
+      <footer className="footer">
+
+        <h2>Resume Builder </h2>
+
+        <p>
+          Build professional resumes
+          easily with modern templates.
+        </p>
+
+
+
+        <div className="footer-links">
+
+          <a href="/">Home</a>
+
+          <a href="/templates">
+            Templates
+          </a>
+
+          <a href="/builder">
+            Builder
+          </a>
+
+          <a href="/contact">
+            Contact
+          </a>
+
+        </div>
+
+
+
+        <p className="copyright">
+          © 2026 Resume  bBuilder. All rights
+          reserved.
+        </p>
+
+      </footer>
+
+    </div>
+
+  )
+}
+
+export default Home
