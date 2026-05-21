@@ -906,4 +906,80 @@ body{
   color: lightgray;
 
   font-size: 18px;
+}/* MOBILE RESPONSIVE */
+
+@media screen and (max-width: 768px) {
+
+  .navbar {
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 20px;
+
+  }
+
+  .logo {
+
+    font-size: 40px;
+
+    text-align: center;
+
+    line-height: 1.1;
+
+  }
+
+  .nav-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+
+  }
+
+  .nav-links a {
+
+    font-size: 18px;
+
+  }
+
+  .hero {
+
+    padding: 60px 20px;
+
+    text-align: center;
+
+  }
+
+  .hero h1 {
+
+    font-size: 55px;
+
+    line-height: 1.1;
+
+  }
+
+  .hero p {
+
+    font-size: 22px;
+
+    padding: 0 10px;
+
+  }
+
+  .hero button {
+
+    width: 220px;
+
+    height: 60px;
+
+    font-size: 22px;
+
+  }
+
 }
