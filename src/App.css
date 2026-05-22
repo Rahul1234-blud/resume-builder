@@ -136,7 +136,7 @@ body{
 }
 
 .template-title{
-  color: white;
+  color: rgb(77, 57, 229);
 
   text-align: center;
 
@@ -220,7 +220,7 @@ body{
 }
 
 .feature-heading{
-  color: white;
+  color: rgb(181, 29, 29);
 
   text-align: center;
 
@@ -857,7 +857,7 @@ body{
 }
 
 .team-section h2{
-  color: white;
+  color: rgb(10, 238, 86);
 
   font-size: 45px;
 
@@ -980,6 +980,201 @@ body{
 
     font-size: 22px;
 
+  }
+
+}/* THEME */
+
+.dark-theme{
+  background:#020617;
+  color:white;
+  min-height:100vh;
+  transition:0.3s;
+}
+
+.light-theme{
+  background:#f4f7fb;
+  color:#111827;
+  min-height:100vh;
+  transition:0.3s;
+}
+
+/* LIGHT MODE NAVBAR */
+
+.light-theme .navbar{
+  background:rgba(255,255,255,0.8);
+}
+
+.light-theme .logo{
+  color:#4f46e5;
+}
+
+.light-theme .nav-links a{
+  color:#111827;
+}
+
+.light-theme .hero h1{
+  color:#111827;
+}
+
+.light-theme .hero p{
+  color:#4b5563;
+}
+
+/* TOGGLE BUTTON */
+
+.theme-toggle{
+
+  width:70px;
+  height:36px;
+
+  border:none;
+  border-radius:50px;
+
+  background:rgba(255,255,255,0.12);
+
+  backdrop-filter:blur(10px);
+
+  cursor:pointer;
+
+  position:relative;
+
+  display:flex;
+  align-items:center;
+
+  padding:4px;
+
+  transition:0.3s;
+
+}
+
+.toggle-circle{
+
+  width:28px;
+  height:28px;
+
+  border-radius:50%;
+
+  background:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:15px;
+
+  transition:0.3s;
+
+  transform:translateX(0);
+
+  color:#111827;
+
+}
+
+.toggle-circle.active{
+
+  transform:translateX(34px);
+
+}/* TOOLKIT PAGE */
+
+.toolkit-page{
+  min-height:100vh;
+  width:100%;
+  padding:120px 8%;
+  background:#020617;
+  color:white;
+}
+
+.toolkit-hero{
+  text-align:center;
+  margin-bottom:70px;
+}
+
+.toolkit-hero h1{
+  font-size:70px;
+  margin-bottom:20px;
+  color:#00e5ff;
+}
+
+.toolkit-hero p{
+  font-size:22px;
+  color:#cbd5e1;
+}
+
+.toolkit-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:30px;
+}
+
+.toolkit-card{
+  padding:35px;
+  border-radius:25px;
+
+  background:rgba(255,255,255,0.08);
+
+  border:1px solid rgba(255,255,255,0.15);
+
+  backdrop-filter:blur(20px);
+
+  transition:0.4s;
+}
+
+.toolkit-card:hover{
+  transform:translateY(-10px);
+  border:1px solid #00e5ff;
+}
+
+.toolkit-icon{
+  font-size:45px;
+  color:#00e5ff;
+  margin-bottom:25px;
+}
+
+.toolkit-card h2{
+  font-size:28px;
+  margin-bottom:15px;
+}
+
+.toolkit-card p{
+  color:#cbd5e1;
+  line-height:1.7;
+  margin-bottom:25px;
+}
+
+.toolkit-card button{
+  padding:12px 28px;
+  border:none;
+  border-radius:12px;
+  background:#00bcd4;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.toolkit-card button:hover{
+  background:#00e5ff;
+  transform:scale(1.05);
+}
+
+
+
+
+
+/* MOBILE */
+
+@media screen and (max-width:768px){
+
+  .toolkit-page{
+    padding:100px 5%;
+  }
+
+  .toolkit-hero h1{
+    font-size:45px;
+  }
+
+  .toolkit-hero p{
+    font-size:18px;
   }
 
 }

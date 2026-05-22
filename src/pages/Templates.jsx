@@ -7,43 +7,42 @@ function Templates() {
 
   return (
 
-    <div className="template-page">
+    <div className="templates-page">
 
-      <h1 className="page-title">
+      <h1 className="templates-heading">
         Choose Your Resume Template
       </h1>
 
 
 
-      <div className="template-grid">
+
+
+      <div className="templates-container">
 
 
 
+        {/* TEMPLATE 1 */}
 
-        <div className="resume-box">
+        <div className="template-card">
 
-          <div className="resume-preview">
+          <img
+            src="https://images.unsplash.com/photo-1586281380117-5a60ae2050cc?q=80&w=800&auto=format&fit=crop"
+            alt=""
+            className="template-image"
+          />
 
-            <div className="preview-header"></div>
+          <h2>
+            Modern Resume
+          </h2>
 
-            <div className="preview-line short"></div>
-
-            <div className="preview-line"></div>
-
-            <div className="preview-line"></div>
-
-            <div className="preview-section"></div>
-
-            <div className="preview-line"></div>
-
-            <div className="preview-line short"></div>
-
-          </div>
-
-          <h2>Modern Resume</h2>
+          <p>
+            Clean modern design for
+            developers and students.
+          </p>
 
           <button
-            onClick={() => navigate("/builder/modern")}
+            className="template-btn"
+            onClick={() => navigate("/builder")}
           >
             Use Template
           </button>
@@ -54,30 +53,28 @@ function Templates() {
 
 
 
+        {/* TEMPLATE 2 */}
 
+        <div className="template-card">
 
-        <div className="resume-box">
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop"
+            alt=""
+            className="template-image"
+          />
 
-          <div className="resume-preview">
+          <h2>
+            Professional Resume
+          </h2>
 
-            <div className="preview-header"></div>
-
-            <div className="preview-section"></div>
-
-            <div className="preview-line"></div>
-
-            <div className="preview-line short"></div>
-
-            <div className="preview-line"></div>
-
-            <div className="preview-section"></div>
-
-          </div>
-
-          <h2>Professional Resume</h2>
+          <p>
+            Perfect template for office
+            and corporate jobs.
+          </p>
 
           <button
-            onClick={() => navigate("/builder/professional")}
+            className="template-btn"
+            onClick={() => navigate("/builder")}
           >
             Use Template
           </button>
@@ -88,36 +85,35 @@ function Templates() {
 
 
 
+        {/* TEMPLATE 3 */}
 
+        <div className="template-card">
 
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop"
+            alt=""
+            className="template-image"
+          />
 
-        <div className="resume-box">
+          <h2>
+             Resume
+          </h2>
 
-          <div className="resume-preview">
-
-            <div className="preview-line short"></div>
-
-            <div className="preview-line"></div>
-
-            <div className="preview-line"></div>
-
-            <div className="preview-section"></div>
-
-            <div className="preview-line short"></div>
-
-            <div className="preview-line"></div>
-
-          </div>
-
-          <h2>Simple Resume</h2>
+          <p>
+            Simple
+            
+          </p>
 
           <button
-            onClick={() => navigate("/builder/simple")}
+            className="template-btn"
+            onClick={() => navigate("/builder")}
           >
             Use Template
           </button>
 
         </div>
+
+
 
 
 

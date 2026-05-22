@@ -3,13 +3,14 @@ import React from "react";
 import {
   BrowserRouter,
   Routes,
-  Route
+  Route,
 } from "react-router-dom";
 
 import Home from "./pages/Home";
 import Templates from "./pages/Templates";
 import Builder from "./pages/Builder";
 import Contact from "./pages/Contact";
+import Toolkit from "./pages/Toolkit";
 
 import "./App.css";
 
@@ -41,12 +42,16 @@ function App() {
           element={<Contact />}
         />
 
+        <Route
+          path="/toolkit"
+          element={<Toolkit />}
+        />
+
       </Routes>
 
     </BrowserRouter>
 
   );
-
 }
 
 export default App;

@@ -1,17 +1,24 @@
-import "../App.css"
+import "../App.css";
 
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
-
+import { FiSun, FiMoon } from "react-icons/fi";
+import { TbTools } from "react-icons/tb";
 
 function Home() {
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
+  const [darkMode, setDarkMode] = useState(true);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
 
   return (
 
-    <div>
+    <div className={darkMode ? "dark-theme" : "light-theme"}>
 
       {/* NAVBAR */}
 
@@ -21,31 +28,47 @@ function Home() {
           Resume Builder
         </h1>
 
-
-
         <div className="nav-links">
 
-          <a href="/">Home</a>
-
-          <a href="/templates">
-            Templates
-          </a>
+         
 
           <a href="/builder">
             Builder
           </a>
+           <a href="/toolkit" className="toolkit-btn">
+    <TbTools />
+  </a>
+
 
           <a href="/contact">
             Contact
           </a>
+          
+
+          {/* THEME TOGGLE */}
+
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+          >
+
+            <div
+              className={
+                darkMode
+                  ? "toggle-circle active"
+                  : "toggle-circle"
+              }
+            >
+
+              {darkMode ? <FiSun /> : <FiMoon />}
+
+            </div>
+
+          </button>
 
         </div>
 
       </nav>
-
-
-
-
 
       {/* HERO SECTION */}
 
@@ -58,14 +81,10 @@ function Home() {
           </span>
         </h1>
 
-
-
         <p className="subtitle">
           Create modern and ATS-friendly
           resumes easily.
         </p>
-
-
 
         <button
           className="btn"
@@ -78,10 +97,6 @@ function Home() {
 
       </div>
 
-
-
-
-
       {/* TEMPLATE SECTION */}
 
       <section className="templates">
@@ -90,18 +105,14 @@ function Home() {
           Resume Templates
         </h2>
 
-
-
         <div className="template-cards">
-
-
 
           <div className="card">
 
             <h3>Modern Resume</h3>
 
             <p>
-              Clean and professional
+              Clean and Modern
               template.
             </p>
 
@@ -115,17 +126,13 @@ function Home() {
 
           </div>
 
-
-
-
-
           <div className="card">
 
-            <h3>Creative Resume</h3>
+            <h3>Professional Resume</h3>
 
             <p>
-              Stylish design for
-              creative jobs.
+              Professional design for
+              corporate jobs.
             </p>
 
             <button
@@ -137,10 +144,6 @@ function Home() {
             </button>
 
           </div>
-
-
-
-
 
           <div className="card">
 
@@ -165,23 +168,15 @@ function Home() {
 
       </section>
 
-
-
-
-
       {/* FEATURES SECTION */}
 
       <section className="features">
 
         <h2 className="feature-heading">
-          Why Choose ResumeAI?
+          Why Choose Resume?
         </h2>
 
-
-
         <div className="feature-boxes">
-
-
 
           <div className="feature-card">
 
@@ -194,10 +189,6 @@ function Home() {
 
           </div>
 
-
-
-
-
           <div className="feature-card">
 
             <h3>Easy Editing</h3>
@@ -208,10 +199,6 @@ function Home() {
             </p>
 
           </div>
-
-
-
-
 
           <div className="feature-card">
 
@@ -227,58 +214,55 @@ function Home() {
         </div>
 
       </section>
+
+      {/* TEAM SECTION */}
+
       <section className="team-section">
 
-  <h2>
-    Project Created By
-  </h2>
+        <h2>
+          Project Created By
+        </h2>
 
-  <div className="team-cards">
+        <div className="team-cards">
 
-    <div className="team-card">
-      <h3>Rahul Fulara</h3>
-      <p>Frontend Developer</p>
-    </div>
+          <div className="team-card">
+            <h3>Rahul Fulara</h3>
+            <p>Frontend Developer</p>
+          </div>
 
-    <div className="team-card">
-      <h3>Rohit Singh Bora</h3>
-      <p>UI Designer</p>
-    </div>
+          <div className="team-card">
+            <h3>Rohit Singh Bora</h3>
+            <p>UI Designer</p>
+          </div>
 
-    <div className="team-card">
-      <h3>Pradeep Bhakuni</h3>
-      <p>React Developer</p>
-    </div>
+          <div className="team-card">
+            <h3>Pradeep Bhakuni</h3>
+            <p>React Developer</p>
+          </div>
 
-    <div className="team-card">
-      <h3>Manmohan Singh Chauhan</h3>
-      <p>Project Manager</p>
-    </div>
+          <div className="team-card">
+            <h3>Manmohan Singh Chauhan</h3>
+            <p>Project Manager</p>
+          </div>
 
-  </div>
+        </div>
 
-</section>
-
-
-
-
+      </section>
 
       {/* FOOTER */}
 
       <footer className="footer">
 
-        <h2>Resume Builder </h2>
+        <h2>
+          Resume Builder
+        </h2>
 
         <p>
           Build professional resumes
           easily with modern templates.
         </p>
 
-
-
         <div className="footer-links">
-
-          <a href="/">Home</a>
 
           <a href="/templates">
             Templates
@@ -294,18 +278,16 @@ function Home() {
 
         </div>
 
-
-
         <p className="copyright">
-          © 2026 Resume  bBuilder. All rights
-          reserved.
+          © 2026 Resume Builder.
+          All rights reserved.
         </p>
 
       </footer>
 
     </div>
 
-  )
+  );
 }
 
-export default Home
+export default Home;
